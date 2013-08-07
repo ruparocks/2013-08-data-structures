@@ -21,6 +21,16 @@ describe("stack", function() {
     expect(stack.size).to.be.a('function');
   });
 
+  it('should have "push" adds to the stack', function() {
+    stack.push('a');
+    expect(stack.size()).equal(1);
+  });
+    it('should have "pop" evaluates the stack', function() {
+    stack.push('a');
+    stack.push('b');
+    stack.pop();
+    expect(stack.size()).equal(1);
+  });
 
   it('should not error when popping from an empty stack', function() {
     expect(function(){stack.pop()}).not.throws();
