@@ -56,11 +56,11 @@ describe("stack", function() {
   it('should pop items in the LIFO order', function() {
     var a = 'a', b = 'b', c = 'c', d = 'd';
 
-    stack.push(a);
-    stack.push(b);
-    stack.push(c);
-    expect(stack.pop()).equal(c);
-    expect(stack.pop()).equal(b);
+    stack.push('a');
+    stack.push('b');
+    stack.push('c');
+    expect(stack.pop()).equal('c');
+    expect(stack.pop()).equal('b');
 
     stack.push(d);
     expect(stack.pop()).equal(d);
